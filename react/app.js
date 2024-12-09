@@ -13,7 +13,7 @@ document.getElementById("nativ-button-container").appendChild(btn);
 
 const gomb = React.createElement("button", 
     {
-        onclick: function()
+        onClick: function()
         {
             alert("Hello");
         },
