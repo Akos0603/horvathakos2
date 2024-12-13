@@ -10,6 +10,7 @@ btn.onclick = function()
 
 btn.innerHTML = "Natív"
 
+//meg hivjuk a nativ-button-container idval elátot divet
 document.getElementById("nativ-button-container").appendChild(btn);
 
 //react -> mit akarok látmi?
