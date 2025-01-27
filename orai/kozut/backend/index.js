@@ -34,9 +34,9 @@ app.get("/8_id", (req,res) =>{
     })
 })
 
-app.get("/?_id", (req,res) =>{
-    const sql = "Select * from `regiok` where Rid = 8";
-    db.query(sql, (err,result) => {
+app.get("/id/:id", (req,res) =>{
+    const sql = "Select * from `regiok` where Rid = ?";
+    db.query(sql, [req.params.id] ,(err,result) => {
         if(err) return res.json(err);
         return res.json(result)
     })
@@ -49,21 +49,32 @@ app.post("/ujregio", (req,res) =>{
     db.query(sql, Values, (err,result) => {
         if(err){
             console.error("Hiba történt", err);
-            return res.status(200).json({message: "Sikertelen", result});
+            return res.status(500).json({message: "Sikertelen", result});
         }
         return res.status(200).json({message: "Sikeres beszúrás!", result});
     })
 })
 
-app.delete("/Delete", (req,res) =>{
-    const sql ="Delete from regiok where Rid = 12";
+app.post("/tobbujregio", (req,res) =>{
+    const sql ="Insert into `regiok` (`Rid`, `regionev`, `regio_tipusa`) Values (?,?,?), (?,?,?),(?,?,?)";
+    const Values = ['12','Szeged','Város','13','Nyiregyháza','Város','14','Záhony','Város'];
 
-    db.query(sql, (err,result) => {
+    db.query(sql, Values, (err,result) => {
         if(err){
             console.error("Hiba történt", err);
-            return res.status(200).json({message: "Sikertelen", result});
+            return res.status(500).json({message: "Sikertelen", result});
         }
-        return res.status(200).json({message: "Sikeres!", result});
+        return res.status(200).json({message: "Sikeres beszúrás!", result});
+    })
+})
+
+app.delete("/Delete/:a", (req,res) =>{
+    const sql ="Delete from regiok where Rid = ?";
+
+    db.query(sql, [req.params.a], (err,result) => {
+        if(err)
+        return res.json({message: "Sikertelen", result});
+        return res.json({message: "Sikeres!", result});
     })
 })
 
