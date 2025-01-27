@@ -49,8 +49,21 @@ app.post("/ujregio", (req,res) =>{
     db.query(sql, Values, (err,result) => {
         if(err){
             console.error("Hiba történt", err);
-            return res.status(200).json({message: "Sikeres beszúrás!", result});
+            return res.status(200).json({message: "Sikertelen", result});
         }
+        return res.status(200).json({message: "Sikeres beszúrás!", result});
+    })
+})
+
+app.delete("/Delete", (req,res) =>{
+    const sql ="Delete from regiok where Rid = 12";
+
+    db.query(sql, (err,result) => {
+        if(err){
+            console.error("Hiba történt", err);
+            return res.status(200).json({message: "Sikertelen", result});
+        }
+        return res.status(200).json({message: "Sikeres!", result});
     })
 })
 
