@@ -42,6 +42,21 @@ app.get("/?_id", (req,res) =>{
     })
 })
 
+app.post("/ujregio", (req,res) =>{
+    const sql ="Insert into `regiok` (`Rid`, `regionev`, `regio_tipusa`) Values (?,?,?)";
+    const Values = ['12','Szeged','Város'];
+
+    db.query(sql, Values, (err,result) => {
+        if(err){
+            console.error("Hiba történt", err);
+            return res.status(200).json({message: "Sikeres beszúrás!", result});
+        }
+    })
+})
+
+
+
+
 app.listen(3001, () =>{
     console.log("Server is running ob port 3001");
 })
