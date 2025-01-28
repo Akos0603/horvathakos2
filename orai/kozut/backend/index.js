@@ -72,8 +72,7 @@ app.delete("/Delete/:a", (req,res) =>{
     const sql ="Delete from regiok where Rid = ?";
 
     db.query(sql, [req.params.a], (err,result) => {
-        if(err)
-        return res.json({message: "Sikertelen", result});
+        if(err) return res.json({message: "Sikertelen", err});
         return res.json({message: "Sikeres!", result});
     })
 })
