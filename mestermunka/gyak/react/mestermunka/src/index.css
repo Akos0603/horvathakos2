@@ -1,0 +1,25 @@
+#nav{
+    background-color: red;
+    text-align: center;
+    border-left: 3px black solid;
+    
+}
+#mid{
+    background-color: green;
+    text-align: center;
+    border-left: 3px black solid;
+    border-right: 3px black solid;
+}
+#about{
+    background-color: blue;
+    text-align: center;
+    border-right: 3px black solid;
+}
+
+#proba{
+    height: 300px;
+    width: auto;
+    background-color: blue;
+    margin: 10px;
+
+}
