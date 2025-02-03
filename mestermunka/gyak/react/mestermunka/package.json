@@ -118,6 +118,7 @@
     "has-tostringtag": "^1.0.2",
     "hasown": "^2.0.2",
     "http-errors": "^2.0.0",
+    "i": "^0.3.7",
     "iconv-lite": "^0.4.24",
     "ignore": "^5.3.2",
     "ignore-by-default": "^1.0.1",
@@ -249,12 +250,12 @@
     "source-map-js": "^1.2.1",
     "sqlstring": "^2.3.1",
     "statuses": "^2.0.1",
+    "string_decoder": "^1.1.1",
     "string.prototype.matchall": "^4.0.12",
     "string.prototype.repeat": "^1.0.0",
     "string.prototype.trim": "^1.2.10",
     "string.prototype.trimend": "^1.0.9",
     "string.prototype.trimstart": "^1.0.8",
-    "string_decoder": "^1.1.1",
     "strip-json-comments": "^3.1.1",
     "supports-color": "^7.2.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
@@ -285,11 +286,10 @@
     "yallist": "^3.1.1",
     "yocto-queue": "^0.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon index.js",
-    "dev":"vite"
+    "start": "nodemon index.js",
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
