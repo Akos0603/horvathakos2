@@ -276,7 +276,6 @@
     "util-deprecate": "^1.0.2",
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2",
-    "vite": "^6.0.11",
     "which": "^2.0.2",
     "which-boxed-primitive": "^1.1.1",
     "which-builtin-type": "^1.2.1",
@@ -293,5 +292,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.0.11"
+  }
 }
