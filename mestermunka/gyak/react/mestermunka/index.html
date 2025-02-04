@@ -15,33 +15,51 @@
     <div class="row">
       <div class="col-sm-2" id="nav" >
         <div class="row">
-          <div>
-            <input type="text" placeholder="Search..">
-          </div>
-          <div class="col-sm-8">
-            <nav id="navbar">Gomb1</nav>
-            <nav id="navbar">Gomb2</nav>
-            <nav id="navbar">Gomb3</nav>
-            <nav id="navbar">Gomb4</nav>
-          </div>
-          <div class="col-sm-2">
-            <input type="checkbox" id="box">
-            <br>
-            <input type="checkbox" id="box">
-            <br>
-            <input type="checkbox" id="box">
-            <br>
-            <input type="checkbox" id="box">
-          </div>
+          <div class="contain">
+            <button class="filter-btn" onclick="toggleFilters()">Szűrők</button>
+         
+            <div class="filters" id="filterPanel">
+                <div class="filter-group">
+                    <label for="kitchen">Konyha:</label>
+                    <select id="kitchen">
+                        <option value="magyar">Magyar</option>
+                        <option value="olasz">Olasz</option>
+                        <option value="francia">Francia</option>
+                        <option value="spanyol">Spanyol</option>
+                        <option value="vegán">Vegán</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="diet">Étkezési preferencia:</label>
+                    <select id="diet">
+                        <option value="vegetáriánus">Vegetáriánus</option>
+                        <option value="vegán">Vegán</option>
+                        <option value="húsos">Húsos</option>
+                        <option value="gluténmentes">Gluténmentes</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="allergy">Allergia:</label>
+                    <input type="checkbox" id="lactose" name="allergy" value="laktózérzékeny"> Laktózérzékeny
+                    <input type="checkbox" id="gluten" name="allergy" value="gluténérzékeny"> Gluténérzékeny
+                </div>
+                <div class="filter-group">
+                    <label for="ingredients">Hozzávalók:</label>
+                    <input type="text" id="ingredients" placeholder="Írja be a hozzávalót...">
+                </div>
+            </div>
+        </div>
+         
         </div>
       </div>
       <div class="col-sm-8" id="mid" >
         <div id="proba">
-          
+
         </div>
       </div>
       <div class="col-sm-2" id="about">talán</div>
     </div>
+    <script src="index.js"></script>
     <script type="module" src="./src/Main.jsx"></script>
   </body>
 </html>

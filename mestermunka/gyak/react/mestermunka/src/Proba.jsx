@@ -1,9 +1,8 @@
-i = 0;
+
 export default function Proba()
 {
-    while (i < 5) {
         return <form className="item">
-        <div class="container">
+                      <div class="container">
             <img src="/public/husleves.jpg" alt="Description of Image" class="responsive-image"></img>
             <div class="text-content">
                 <h1>Your Title Here</h1>
@@ -12,8 +11,5 @@ export default function Proba()
             </div>
         </div>
         </form>
-    }
-
-    i++
 }
 

@@ -31,3 +31,8 @@ app.listen(3000, () => {
     console.log("Server is running ob port 3000");
 })
 
+function toggleFilters() {
+    var filterPanel = document.getElementById('filterPanel');
+    filterPanel.classList.toggle('open');
+}
+
