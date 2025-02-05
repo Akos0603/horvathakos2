@@ -26,6 +26,13 @@ app.get("/*" , (req,res) => {
         return res.json(result)
     })
 }) 
+app.get("/*" , (req,res) => {
+    const sql = "Select Keszites from `receptek`";
+    db.query(sql, (err, result) =>{
+        if(err) return res.json(err)
+        return res.json(result)
+    })
+}) 
 
 app.listen(3000, () => {
     console.log("Server is running ob port 3000");

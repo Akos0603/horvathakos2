@@ -135,7 +135,7 @@ select, input[type="checkbox"], input[type="text"] {
     font-size: 16px;
     width: 100%;
     max-width: 300px;
-    border-radius: 5px;
+    border-radius: 1px;
     border: 1px solid #ddd;
 }
 /* Mobil optimalizálás */
@@ -146,4 +146,8 @@ select, input[type="checkbox"], input[type="text"] {
     .filter-btn {
         width: 100%;
     }
+}
+
+#nav-item{
+    float: right;
 }
