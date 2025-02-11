@@ -13,7 +13,7 @@ export default function App(){
         <a class="nav-link" href="./..html" >Blank</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blank</a>
+        <a class="nav-link" href="./test.html">Blank</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Blank</a>
