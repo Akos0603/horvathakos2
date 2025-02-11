@@ -1,22 +1,23 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
+import {StrictMode } from "react"
 import App from "./App"
 import Proba from "./Proba"
-import teszt from "./test"
+import Appp from "./test"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
+    <StrictMode>
         <App/>
-    </React.StrictMode>
+    </StrictMode>
 )
 ReactDOM.createRoot(document.getElementById("proba")).render(
-    <React.StrictMode>
+    <StrictMode>
         <Proba/>
-    </React.StrictMode>
+    </StrictMode>
 )
 
 ReactDOM.createRoot(document.getElementById("test")).render(
-    <React.StrictMode>
-        <teszt/>
-    </React.StrictMode>
+    <StrictMode>
+        <Appp/>
+    </StrictMode>
 )

@@ -3,12 +3,12 @@
 export default function Proba()
 {
         return <form className="item">
-                      <div class="container">
-            <img src="/public/husleves.jpg" alt="Description of Image" class="responsive-image"></img>
-            <div class="text-content">
+            <div className="container">
+            <img src="/public/husleves.jpg" alt="Description of Image" className="responsive-image"></img>
+            <div className="text-content">
             
                 
-            <button class="action-button">Click Me</button>
+            <button className="action-button">Click Me</button>
             </div>
         </div>
         </form>

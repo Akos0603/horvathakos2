@@ -10,10 +10,10 @@ export default function App(){
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav" >
       <li class="nav-item" >
-        <a class="nav-link" href="./..html" >Blank</a>
+        <a class="nav-link" href="./..html" >Bejelentkezés</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./test.html">Blank</a>
+        <a class="nav-link" href="./test.html">Teszt</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Blank</a>

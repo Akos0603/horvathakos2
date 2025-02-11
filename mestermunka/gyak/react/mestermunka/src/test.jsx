@@ -1,12 +1,11 @@
 
-import { text } from "body-parser";
 import React, {useEffect,useState} from "react"
 
-function teszt() {
+function Appp() {
     const [data,setData] = useState([])
 
     useEffect(() => {
-        fetch('https//localhost:3000/Keszities')
+        fetch('http://localhost:3000/*')
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(err => console.log(err));
@@ -14,14 +13,26 @@ function teszt() {
     
     return(
         <div style={{padding: "50px"}}>
-            {data.map(d, i => (
-            <tr key={i}>
-                <h1>{d.Keszites}</h1>
-            </tr>
-        ))} 
+                      <table>
+                <thead>
+                  <tr>
+                  <th>Keszites</th>
+                    <th>Receptek neve</th>
+                    <th>Receptek id</th>
+                  </tr> 
+                </thead>
+                <tbody>
+                {data.map((d, i) => (
+                        <tr key={i}>
+                            <th>{d.Receptek_id}</th>
+                        </tr>
+                    ))} 
+                </tbody>
+            </table>
+
         </div>
     )
 }
 
-export default teszt
+export default Appp
 
