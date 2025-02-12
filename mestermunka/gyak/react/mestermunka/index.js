@@ -19,8 +19,15 @@ app.get("/", (req,res) => {
     res.send("Fut a backend");
 })
 
-app.get("/*" , (req,res) => {
+app.get("/osszes" , (req,res) => {
     const sql = "Select * from `receptek`";
+    db.query(sql, (err, result) =>{
+        if(err) return res.json(err)
+        return res.json(result)
+    })
+}) 
+app.get("/egy" , (req,res) => {
+    const sql = "SELECT * FROM `receptek` WHERE Receptek_id = 2";
     db.query(sql, (err, result) =>{
         if(err) return res.json(err)
         return res.json(result)

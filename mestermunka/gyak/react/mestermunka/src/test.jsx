@@ -1,22 +1,21 @@
-
 import React, {useEffect,useState} from "react"
 
-function Appp() {
+export default function Leker() {
     const [data,setData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/*')
+        fetch('http://localhost:3000/osszes')
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setData(data))
         .catch(err => console.log(err));
     }, [])
     
     return(
         <div style={{padding: "50px"}}>
-                      <table>
+            <table>
                 <thead>
                   <tr>
-                  <th>Keszites</th>
+                    <th>Keszites</th>
                     <th>Receptek neve</th>
                     <th>Receptek id</th>
                   </tr> 
@@ -24,7 +23,7 @@ function Appp() {
                 <tbody>
                 {data.map((d, i) => (
                         <tr key={i}>
-                            <th>{d.Receptek_id}</th>
+                          <td>{d.Receptek_neve}</td>
                         </tr>
                     ))} 
                 </tbody>
@@ -34,5 +33,4 @@ function Appp() {
     )
 }
 
-export default Appp
 

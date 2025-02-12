@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client"
 import {StrictMode } from "react"
 import App from "./App"
 import Proba from "./Proba"
-import Appp from "./test"
+import Leker from "./test"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <StrictMode>
@@ -16,8 +16,8 @@ ReactDOM.createRoot(document.getElementById("proba")).render(
     </StrictMode>
 )
 
-ReactDOM.createRoot(document.getElementById("test")).render(
+ReactDOM.createRoot(document.getElementById("teszt")).render(
     <StrictMode>
-        <Appp/>
+        <Leker/>
     </StrictMode>
 )
