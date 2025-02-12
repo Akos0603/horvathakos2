@@ -1,3 +1,4 @@
+import { range } from "balanced-match";
 import React, {useEffect,useState} from "react"
 
 export default function Proba()
@@ -12,10 +13,10 @@ export default function Proba()
         
     }, [])
 
-
-
     return <form className="item">
         <div className="container">
+        <div>
+            </div>   
         {data.map((d, i) => (
             <div key={i}>
                 <img src={d.kep} alt="Description of Image" className="responsive-image"/>
@@ -33,7 +34,6 @@ export default function Proba()
                 <p>{d.Keszites}</p>
             </div>
         ))} 
-        <ul></ul>
         <button className="action-button">Click Me</button>
         </div>
     </div>

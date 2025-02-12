@@ -27,7 +27,7 @@ app.get("/osszes" , (req,res) => {
     })
 }) 
 app.get("/egy" , (req,res) => {
-    const sql = "SELECT * FROM `receptek` WHERE Receptek_id = 2";
+    const sql = "SELECT * FROM `receptek` WHERE Receptek_id = 1";
     db.query(sql, (err, result) =>{
         if(err) return res.json(err)
         return res.json(result)
