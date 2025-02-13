@@ -1,5 +1,7 @@
 #nav{
     border-left: 3px black solid;
+    background-color: rgb(41, 145, 30);
+    height: auto;
     
 }
 #mid{
@@ -10,6 +12,8 @@
 #about{
     text-align: center;
     border-right: 3px black solid;
+    background-color: rgb(41, 145, 30);
+    height: auto;
 }
 
 #proba{
@@ -19,9 +23,7 @@
 
 }
 body{
-    background-image: url(/public/1000_F_835141439_2Ofv4bF6Fl82lyN0bCZ5sIFeeD8mXGAj.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
 }
 
 #img{ 
@@ -37,23 +39,29 @@ body{
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
- 
-.responsive-image {
-    max-width: 100%;
+    width: auto;
     height: auto;
-    flex: 1 1 300px;
-    margin-right: 20px;
+    background-color: rgb(130, 115, 6) ;
 }
  
+.res-image{
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  flex: 1 1 300px;
+
+}
 .text-content {
-    flex: 2 1 300px;
+    flex: auto;
+}
+
+#nev{
+    margin: auto;
+    text-align: left;
+}
+
+#recept{
+    margin: 10px;
 }
  
 @media (max-width: 768px) {
@@ -68,8 +76,13 @@ body{
     }
 }
 
+#right{
+    border: black solid 1px;
+}
+
 .action-button {
-    padding: 10px 20px;
+    height: auto;
+    width: 60px;
     font-size: 16px;
     color: #fff;
     background-color: #007BFF;
@@ -77,8 +90,8 @@ body{
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
- 
+
+} 
 .action-button:hover {
     background-color: #0056b3;
 }

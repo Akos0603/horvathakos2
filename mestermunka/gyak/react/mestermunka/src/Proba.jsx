@@ -14,27 +14,33 @@ export default function Proba()
     }, [])
 
     return <form className="item">
-        <div className="container">
-        <div>
-            </div>   
+        <div className="container row">
+        <div className="col-sm-4">
         {data.map((d, i) => (
             <div key={i}>
-                <img src={d.kep} alt="Description of Image" className="responsive-image"/>
+                <img src={d.kep} className="res-image"/>
             </div>
         ))} 
-        
-        <div className="text-content">
-        {data.map((d, i) => (
-            <div key={i}>
+        </div>   
+        <div className="text-content col-sm-8 row" id="right">
+            <div className="col-sm-3" id="nev">
+                {data.map((d, i) => (
+                <div key={i}>
                 <h1>{d.Receptek_neve}</h1>
+                </div>
+                ))} 
             </div>
-        ))} 
-        {data.map((d, i) => (
-            <div key={i}>
+            <div className="col-sm-7" id="recept">
+            {data.map((d, i) => (
+                <div key={i}>
                 <p>{d.Keszites}</p>
+                </div>
+                 ))}     
             </div>
-        ))} 
-        <button className="action-button">Click Me</button>
+
+            <div className="col-sm-1">
+                <button className="action-button">Click Me</button>
+            </div>
         </div>
     </div>
     </form>
