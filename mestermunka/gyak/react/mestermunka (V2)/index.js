@@ -49,4 +49,3 @@ function toggleFilters() {
     var filterPanel = document.getElementById('filterPanel');
     filterPanel.classList.toggle('open');
 }
-

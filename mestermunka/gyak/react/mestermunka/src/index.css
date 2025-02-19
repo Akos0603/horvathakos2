@@ -17,10 +17,8 @@
 }
 
 #proba{
-    height: 300px;
+    height: auto;
     width: auto;
-    margin: 10px;
-
 }
 body{
     background-color: white;
