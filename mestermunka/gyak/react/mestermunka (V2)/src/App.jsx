@@ -20,18 +20,10 @@ function App() {
         {data.map((d, i) => (
             <div key={i}>
                 <img src={d.kep}/>
+                <h1>{d.Receptek_neve}</h1>
+                <p>{d.Keszites}</p>
             </div>
         ))} 
-        {data.map((d, i) => (
-                <div key={i}>
-                <h1>{d.Receptek_neve}</h1>
-                </div>
-          ))} 
-        {data.map((d, i) => (
-                <div key={i}>
-                <p>{d.Keszites}</p>
-                </div>
-        ))}
       </div>
     </>
   )
