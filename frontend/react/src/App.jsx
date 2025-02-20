@@ -1,33 +1,35 @@
 import React from "react";
 import { useState, useEffect } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "tachyons"
 
 
 
 
-const Felhasznalok = (props) => {
-    const [felhasznalok, setFelhasznalok] = useState([]);
+const App = (props) => {
+    const [termek, setTermekek] = useState([]);
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/users/`)
+        fetch(`https://fakestoreapiserver.reactbd.com/products`)
             .then(res => res.json())
-            .then(data => setFelhasznalok(data))
+            .then(data => setTermekek(data))
     }, []);
     return (
         <div className="container-fluid bg-light-gray"> 
-            <article className="row justify-content-center ">
-                <h1 className="text-center display-4 mt-5 mb-5 bg-light-red">Felhasználók</h1>
+            <article className="row justify-content-center">
+                <h1 className="text-center display-4 mt-5 mb-5 bg-light-blue">Kollekciok</h1>
                 <div className="row">
-                        {felhasznalok.map(felhasznalo => (
+                        {termek.map(termekek => (
 
                             <div className="col-md-4">
-                                <div className=" bg-light-red br3 pa3 ma2 grow bw2 shadow-5" key={felhasznalo.id}>
-                                    <h2 className="text-center">{felhasznalo.name}</h2>
-                                    <p>Felhasználó neve: {felhasznalo.name}</p>
-                                    <p>Email: {felhasznalo.email}</p>
-                                    <p>Address: {felhasznalo.address.street}, {felhasznalo.address.city}</p>
-                                    <p>Phone: {felhasznalo.phone}</p>
-                                    <p>Website: {felhasznalo.website}</p>
-                                    <p>Company: {felhasznalo.company.name}</p>
+                                <div className="bg-light-blue br3 pa3 ma2 grow bw2 shadow-5" key={termekek.id}>
+                                    <h2 className="text-center">{termekek.title}</h2>
+                                    <p>Neve: {termekek.title}</p>
+                                    <p>Régi ár: ${termekek.oldPrice}</p>
+                                    <p>Mostani ár: ${termekek.price}</p>
+                                    <p>Leirás: {termekek.description}</p>
+                                    <p>Kategoria: {termekek.category}</p>
+                                    <p>Értékelés: {termekek.rating}</p>
+                                    <img src={termekek.image}></img>
                                 </div>
                             </div>
                             
@@ -38,4 +40,4 @@ const Felhasznalok = (props) => {
     );
 }
 
-export default Felhasznalok;
+export default App;
