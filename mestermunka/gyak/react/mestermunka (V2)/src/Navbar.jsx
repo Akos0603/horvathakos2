@@ -8,7 +8,7 @@ const NavBar = (() => {
     return(
         <div>
             <nav>
-                <Link to = '/'>Főoldal</Link>
+                <Link to = '/'>Receptek</Link>
                 <div className="menu" onClick={() =>
             setMenuOpen(!menuOpen)
             }>

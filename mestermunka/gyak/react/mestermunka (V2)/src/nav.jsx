@@ -8,7 +8,6 @@ const Nav = (() =>{
         <>
             <div>
                 <NavBar/>
-                <h1>Receptek</h1>
             </div>
         </>
     )
