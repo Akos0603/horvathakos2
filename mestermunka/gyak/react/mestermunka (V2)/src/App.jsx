@@ -1,8 +1,8 @@
-import './App.css'
 import React, {useEffect,useState} from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import axois from "axios"
+import "./App.css";
 
 function App() {
 
@@ -16,14 +16,13 @@ function App() {
     }, [])  
   return (
     <>
-
       <table>
-        <tbody>
+        <tbody className='box'>
           {data.map((d) =>
-              <tr key={data.Receptek_id}>
-                <img src={d.kep}/>
-                <th>{d.Receptek_neve}</th>
-                <td>{d.Keszites}</td>
+              <tr key={data.Receptek_id} >
+                <td><img src={d.kep} className='img'/></td>
+                <th className='name'>{d.Receptek_neve}</th>
+                <td className='text'>{d.Keszites}</td>
             </tr>
           )}
         </tbody>

@@ -1,0 +1,15 @@
+#box {
+    border: 1px solid black;
+}
+
+#name {
+    font-size: 30px;
+}
+
+#img {
+    background-color: green;
+}
+
+#text {
+    margin: auto;
+}

@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import Nav from './nav.jsx'
+import "./App.css"
 
 
 createRoot(document.getElementById('root')).render(
