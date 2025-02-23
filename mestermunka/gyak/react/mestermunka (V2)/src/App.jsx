@@ -2,7 +2,7 @@ import React, {useEffect,useState} from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import axois from "axios"
-import "./App.css";
+import "./App.css"
 
 function App() {
 
@@ -17,15 +17,15 @@ function App() {
   return (
     <>
       <table>
-        <tbody className='box'>
           {data.map((d) =>
+          <tbody className='box'>
               <tr key={data.Receptek_id} >
-                <td><img src={d.kep} className='img'/></td>
-                <th className='name'>{d.Receptek_neve}</th>
-                <td className='text'>{d.Keszites}</td>
+                <td><img src={d.kep} id='img'/></td>
+                <th id='name'>{d.Receptek_neve}</th>
+                <td id='text'>{d.Keszites}</td>
             </tr>
+            </tbody>
           )}
-        </tbody>
       </table>
       
 
